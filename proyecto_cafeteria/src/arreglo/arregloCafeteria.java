@@ -28,7 +28,7 @@ public class arregloCafeteria {
         return pedi.get(x);
     }
 
-  
+  hola
     public double promedioTotal() {
         double suma = 0.0;
         for (int i = 0; i < tamaño(); i++) {
