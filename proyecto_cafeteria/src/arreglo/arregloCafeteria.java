@@ -46,7 +46,23 @@ public class arregloCafeteria {
         }
         return null;
     }
+public String mostrar() {
+        if (pedi.isEmpty()) return "No hay pedidos.";
 
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tamaño(); i++) {
+            Pedido p = obtener(i);
+            sb.append("Pedido ").append(i + 1).append(":\n");
+            sb.append("Producto: ").append(p.getProducto()).append("\n");
+            sb.append("Tamaño: ").append(p.getTamaño()).append("\n");
+            if (p.getExtra() != null && !p.getExtra().isEmpty()) {
+                sb.append("Extra: ").append(p.getExtra()).append("\n");
+            }
+            sb.append(String.format("Total: $%.2f", p.calcularPrecio(true))).append("\n\n");
+        }
+        return sb.toString();
+    }
+}
    
   
 }
