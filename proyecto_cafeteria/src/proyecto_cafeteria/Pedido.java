@@ -16,8 +16,21 @@ public class Pedido {
     }
 
     public double calcularPrecio() {
-       
+        double precio = 0.0;
+        if (producto.toLowerCase().contains("cafe")) precio += 5.0;
+        else if (producto.toLowerCase().contains("té")) precio += 2.0;
+
+        if (tamaño != null) {
+            switch (tamaño) {
+                case "Grande": precio += 1.0; break;
+                case "Mediano": precio += 0.5; break;
+                case "Pequeño": break;
+            }
+        }
+
+        return precio; 
     }
+
 
     public double calcularPrecio(boolean incluirExtras) {
         double precio = calcularPrecio();
