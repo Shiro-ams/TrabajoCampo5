@@ -103,7 +103,12 @@ public class V1 extends JFrame {
 		            }
 
 		            
-		            
+				Pedido pedido;
+                   	 	if (extra != null && !extra.isEmpty()) {
+                        		pedido = new Pedido(producto, tamaño, extra);
+                    		} else {
+                        		pedido = new Pedido(producto, tamaño);
+                    		}
 		          
 		            double precio = pedido.calcularPrecio(true); 
 		            String resumen = "Producto: " + producto + "\n" 
