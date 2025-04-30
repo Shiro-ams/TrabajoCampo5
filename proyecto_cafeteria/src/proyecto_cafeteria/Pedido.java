@@ -26,6 +26,17 @@ public class Pedido {
         }
         return precio;
     }
+public String getProducto() {
+        return producto;
+    }
 
+    public String getTamaño() {
+        return tamaño;
+    }
+
+    public String getExtra() {
+        return extra;
+    }
+}
    
 
