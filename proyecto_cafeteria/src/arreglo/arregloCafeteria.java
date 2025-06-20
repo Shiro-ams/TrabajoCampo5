@@ -23,7 +23,7 @@ public class arregloCafeteria {
         return pedi.size();
     }
 
-  
+  //tuve que modificar para que registre bien la aja
     public Pedido obtener(int x) {
         return pedi.get(x);
     }
@@ -46,6 +46,7 @@ public class arregloCafeteria {
         }
         return null;
     }
+//mostrar el modificado que faltaba
 public String mostrar() {
         if (pedi.isEmpty()) return "No hay pedidos.";
 
